@@ -1,8 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import appReducer from '../features/AppSlice';
+import genreReducer from '../features/GenreSlice';
+import listGenreReducer from '../features/ListGenreSlice';
+import listMovieReducer from '../features/ListMovieSlice';
+import detailMovieReducer from '../features/DetailMovieSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    app: appReducer,
+    genre: genreReducer,
+    listGenre: listGenreReducer,
+    listMovie: listMovieReducer,
+    detailMovie: detailMovieReducer,
   },
 });
