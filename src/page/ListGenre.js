@@ -20,12 +20,13 @@ const ListGenre = () => {
   };
   const { genrePage } = useSelector((state) => state.app);
   useEffect(() => {
-    dispatch(getListGenres(idGenre, genrePage));
+    console.log(genrePage);
+    dispatch(getListGenres({idGenre, genrePage}));
   }, [page]);
 
   const listMovie = useSelector(listGenreSelectors.selectAll);
 
-  console.log(listMovie[0]?.title);
+  // console.log(listMovie[0]?.title);
 
   useEffect(() => {
     async function getDataPage() {
